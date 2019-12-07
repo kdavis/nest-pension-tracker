@@ -5,7 +5,7 @@
 Install Python 3+
 
 ```bash
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Start using the new class
