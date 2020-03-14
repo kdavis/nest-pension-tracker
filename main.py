@@ -44,17 +44,15 @@ execute_query(db_create_query)
 
 print("Created database")
 
-while True:
-    nest = NestPension(USERNAME, PASSWORD)
-    nest.login()
+nest = NestPension(USERNAME, PASSWORD)
+nest.login()
 
-    value = nest.get_value()
-    print("Found value of %s" % (value))
+value = nest.get_value()
+print("Found value of %s" % (value))
 
-    insert_query = "INSERT INTO nest_pension (Value, RecordDateTime) values (%s, '%s')" % (
-        value, strftime("%Y-%m-%d %H:%M:%S"))
+insert_query = "INSERT INTO nest_pension (Value, RecordDateTime) values (%s, '%s')" % (
+    value, strftime("%Y-%m-%d %H:%M:%S"))
 
-    execute_query(insert_query)
+execute_query(insert_query)
 
-    print("Inserted data point.")
-    time.sleep(HOURS * 3600)
+print("Inserted data point.")
