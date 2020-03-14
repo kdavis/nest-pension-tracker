@@ -7,14 +7,13 @@ from nestpension import NestPension
 
 USERNAME = os.environ.get('NEST_USERNAME')
 PASSWORD = os.environ.get('NEST_PASSWORD')
-HOURS = int(os.environ.get('HOURS'))
 DB_HOST = os.environ.get('DB_HOST')
 DB_USERNAME = os.environ.get('DB_USERNAME')
 DB_PORT = int(os.environ.get('DB_PORT'))
 DB_PASSWORD = os.environ.get('DB_PASSWORD')
 DB_DATABASE = os.environ.get('DB_DATABASE')
 
-if USERNAME is None or PASSWORD is None or HOURS is None or DB_HOST is None:
+if USERNAME is None or PASSWORD is None or DB_HOST is None:
     print("Environment variables are needed!")
     sys.exit(0)
 
